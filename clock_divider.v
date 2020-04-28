@@ -8,7 +8,7 @@ module clock_divider(
 	integer counter_value = 0;
 	integer counter_digit = 0;
 	 
-	 always@ (posedge clk)
+	always@ (posedge clk)		//Two consecutive always blocks can be merged. Look into the repository of Verilog digital clock.
 		begin
 			if(counter_value == 600000)
 				counter_value <= 0;
