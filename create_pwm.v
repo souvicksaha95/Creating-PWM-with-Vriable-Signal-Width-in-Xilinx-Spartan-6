@@ -9,7 +9,7 @@ module create_pwm(
 	output pwm_pin
 	);
 	
-wire divided_clk, digit_clk; //the first clock is for counting seconds, the second one is to drive the seven segment display.
+wire divided_clk, digit_clk; //the first clock is for counting seconds, the second one is to multiplex the seven segment display.
 wire [3:0] thousand, hundred, ten, one;
 integer duty_cycle = 0, digit = 0;
 reg [15:0] pulse_width; //pulse widh = 50 * duty_cycle, in microseconds.	
